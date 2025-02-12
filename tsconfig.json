@@ -1,16 +1,13 @@
 {
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "jsx": "react-jsx",
-    "moduleResolution": "node",
-    "module": "ESNext",
-    "target": "ES6",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "outDir": "dist",
-  },
-  "include": [
-    "src"
-  ]
+    "paths": {
+      "@kbm/docs/components": [
+        "./docs/components"
+      ],
+      "@kbm/tailwind-config": [
+        "./packages/core/tailwind-config/src"
+      ],
+    }
+  }
 }

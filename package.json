@@ -1,12 +1,26 @@
 {
   "name": "pbm-lib",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
+  "browserslist": "> 0.5%, not dead",
+  "packageManager": "yarn@4.1.1+sha512.ec40d0639bb307441b945d9467139cbb88d14394baac760b52eca038b330d16542d66fef61574271534ace5a200518dabf3b53a85f1f9e4bfa37141b538a9590",
+  "workspaces": [
+    "packages//"
+  ],
   "scripts": {
-    "build": "rollup -c"
+    "lint": "biome check --fix /packages",
+    "build": "yarn workspaces foreach -vA run build",
+    "dev": "yarn workspaces foreach -vA run dev",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "clean": "yarn workspaces foreach -vA run clean",
+    "publish": "yarn workspaces foreach -pvW --exclude @kbm/design-system npm publish --tolerate-republish",
+    "ci": "yarn build && yarn publish",
+    "local": "yarn clean && yarn build && yarn workspaces foreach -vA run local",
+    "chromatic": "npx chromatic --exit-zero-on-changes"
   },
   "devDependencies": {
     "@babel/core": "^7.26.8",
@@ -17,16 +31,21 @@
     "@rollup/plugin-commonjs": "^28.0.2",
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^12.1.2",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
+    "postcss": "^8.5.2",
     "rollup": "^4.34.6",
+    "rollup-plugin-delete": "^2.1.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "tslib": "^2.8.1",
     "typescript": "^5.7.3"
   },
   "dependencies": {
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "tailwind-variants": "^0.3.1",
+    "tailwindcss": "^4.0.6"
   }
 }
