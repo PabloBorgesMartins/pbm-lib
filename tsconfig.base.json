@@ -1,7 +1,13 @@
 {
-  "include": ["packages", "docs", "types", "tailwind.config.ts"],
+  "include": [
+    "packages",
+    "docs",
+    "types",
+    "tailwind.config.ts"
+  ],
   "compilerOptions": {
     "allowJs": false,
+    "allowImportingTsExtensions": true,
     "allowSyntheticDefaultImports": true,
     "alwaysStrict": true,
     "baseUrl": ".",
@@ -11,7 +17,11 @@
     "experimentalDecorators": false,
     "importHelpers": true,
     "jsx": "react",
-    "lib": ["DOM", "ESNext", "DOM.Iterable"],
+    "lib": [
+      "DOM",
+      "ESNext",
+      "DOM.Iterable"
+    ],
     "moduleResolution": "node",
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
@@ -32,7 +42,12 @@
     "strictPropertyInitialization": true,
     "stripInternal": true,
     "target": "ESNext",
-    "types": ["node"],
-    "typeRoots": ["./node_modules/@types", "./types"]
+    "types": [
+      "node"
+    ],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./types"
+    ]
   }
 }

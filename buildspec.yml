@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 20
+  build:
+    commands:
+      - corepack enable
+      - yarn config set unsafeHttpWhitelist --json '["internal-gkt-generic-apps*"]'
+      - yarn config set npmPublishRegistry $NPM_REGISTRY_URL
+      - yarn config set npmAuthToken $NPM_TOKEN
+      - yarn install
+      - yarn ci

@@ -2,10 +2,7 @@
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "paths": {
-      "@kbm/docs/components": [
-        "./docs/components"
-      ],
-      "@kbm/tailwind-config": [
+      "@pbm/tailwind-config": [
         "./packages/core/tailwind-config/src"
       ],
     }

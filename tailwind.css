@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .container {
+    @apply mx-auto max-w-none w-full px-16 desktop:max-w-[80rem] desktop:px-32 desktopLarge:max-w-[98rem];
+  }
+}
