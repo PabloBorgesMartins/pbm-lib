@@ -1,10 +1,15 @@
 {
-  "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "paths": {
-      "@pbm/tailwind-config": [
-        "./packages/core/tailwind-config/src"
-      ],
-    }
-  }
+    "declaration": true,
+    "declarationDir": "lib",
+    "esModuleInterop": true,
+    "moduleResolution": "Node",
+    "jsx": "react",
+    "resolveJsonModule": true,
+    "strict": true,
+    "target": "ESNext"
+  },
+  "include": [
+    "src/**/*"
+  ]
 }
