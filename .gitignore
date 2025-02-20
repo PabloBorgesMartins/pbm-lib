@@ -1,7 +1,7 @@
 # Node artifact files
 .npmrc
 
-.yarnrc.yml
+/*.yml
 
 .yarn/
 node_modules/
