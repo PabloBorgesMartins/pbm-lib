@@ -1,5 +1,5 @@
 {
-  "name": "@pbm/lib",
+  "name": "@pablomartinsdev/lib",
   "version": "0.0.1",
   "description": "Lib de helpers",
   "main": "lib/index.cjs.js",
@@ -10,11 +10,14 @@
   "field": [
     "lib"
   ],
+  "files": [
+    "lib"
+  ],
   "browserslist": "> 0.5%, not dead",
   "packageManager": "yarn@4.1.1+sha512.ec40d0639bb307441b945d9467139cbb88d14394baac760b52eca038b330d16542d66fef61574271534ace5a200518dabf3b53a85f1f9e4bfa37141b538a9590",
-  "workspaces": [
-    "packages/*/*"
-  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
     "build": "./publish.sh",
     "dev": "rollup -c && npm pack",

@@ -1349,9 +1349,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pbm/lib@workspace:.":
+"@pablomartinsdev/lib@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@pbm/lib@workspace:."
+  resolution: "@pablomartinsdev/lib@workspace:."
   dependencies:
     "@babel/core": "npm:^7.26.8"
     "@babel/preset-env": "npm:^7.26.8"

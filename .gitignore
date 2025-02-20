@@ -1,7 +1,9 @@
 # Node artifact files
-.yarn/
-.yarnrc.yml
 .npmrc
+
+.yarnrc.yml
+
+.yarn/
 node_modules/
 dist/
 umd
