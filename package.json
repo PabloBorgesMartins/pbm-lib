@@ -17,7 +17,9 @@
   ],
   "scripts": {
     "build": "./publish.sh",
-    "dev": "rollup -c && npm pack"
+    "dev": "rollup -c && npm pack",
+    "prepublish": "yarn dev",
+    "publish": "yarn prepublish && yarn npm publish --access public"
   },
   "devDependencies": {
     "@babel/core": "^7.26.8",
